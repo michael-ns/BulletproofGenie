@@ -1,0 +1,13 @@
+{
+  "name": "devops-genie",
+  "version": "1.0.0",
+  "description": "Bulletproof DevOps Genie",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.0",
+    "aws-sdk": ">=2.1.8",
+    "markup-js": "1.5.21"
+  }
+}

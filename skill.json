@@ -1,0 +1,475 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "bulletproof genie",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "Assessment",
+                    "slots": [
+                        {
+                            "name": "Frequency",
+                            "type": "Frequency"
+                        }
+                    ],
+                    "samples": [
+                        "bring it on"
+                    ]
+                },
+                {
+                    "name": "SourceControl",
+                    "slots": [
+                        {
+                            "name": "sc_a",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{sc_a}"
+                            ]
+                        },
+                        {
+                            "name": "sc_b",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{sc_b}"
+                            ]
+                        },
+                        {
+                            "name": "sc_c",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{sc_c} "
+                            ]
+                        },
+                        {
+                            "name": "sc_d",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{sc_d}"
+                            ]
+                        },
+                        {
+                            "name": "sc_e",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{sc_e}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "run sauce control quiz",
+                        "run source control quiz",
+                        "south control survey",
+                        "south control",
+                        "source control",
+                        "sauce control",
+                        "source control survey"
+                    ]
+                },
+                {
+                    "name": "QuizStarter",
+                    "slots": [],
+                    "samples": [
+                        "run quiz",
+                        "score my practice",
+                        "assess my performance",
+                        "start a quiz",
+                        "quiz"
+                    ]
+                },
+                {
+                    "name": "ContinuousIntegration",
+                    "slots": [
+                        {
+                            "name": "ci_a",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{ci_a}"
+                            ]
+                        },
+                        {
+                            "name": "ci_b",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{ci_b}"
+                            ]
+                        },
+                        {
+                            "name": "ci_c",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{ci_c}"
+                            ]
+                        },
+                        {
+                            "name": "ci_d",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{ci_d}"
+                            ]
+                        },
+                        {
+                            "name": "ci_e",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{ci_e}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "baseline my continuous integration practice",
+                        "assess continuous integration",
+                        "run quiz for continuous integration",
+                        "continuous integration"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Frequency",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "every day"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "every sprint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "QuizAnswer",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "no",
+                                "synonyms": [
+                                    "nope"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "yes",
+                                "synonyms": [
+                                    "yep"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "QuizArea",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "infrastructure or security",
+                                "synonyms": [
+                                    "infrastructure as code"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "automated testing",
+                                "synonyms": [
+                                    "test automation"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "development and operation collaboration",
+                                "synonyms": [
+                                    "DevOps"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "production deployment",
+                                "synonyms": [
+                                    "release",
+                                    "production release",
+                                    "deployment"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "continuous integration"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "source control"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "Assessment",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Frequency",
+                            "type": "Frequency",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.340391440418.26638991519"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SourceControl",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "sc_a",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.170141293203.585976710447"
+                            }
+                        },
+                        {
+                            "name": "sc_b",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.170141293203.1303738703632"
+                            }
+                        },
+                        {
+                            "name": "sc_c",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.610421961691.258272890680"
+                            }
+                        },
+                        {
+                            "name": "sc_d",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.610421961691.1358581892895"
+                            }
+                        },
+                        {
+                            "name": "sc_e",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.610421961691.816699796963"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "QuizStarter",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": []
+                },
+                {
+                    "name": "ContinuousIntegration",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "ci_a",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.219718800476.88124395445"
+                            }
+                        },
+                        {
+                            "name": "ci_b",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.219718800476.299912632362"
+                            }
+                        },
+                        {
+                            "name": "ci_c",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.219718800476.1377872167082"
+                            }
+                        },
+                        {
+                            "name": "ci_d",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.219718800476.1239582410219"
+                            }
+                        },
+                        {
+                            "name": "ci_e",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.219718800476.399711400330"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.340391440418.26638991519",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How often do you release to production"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.344504142878.780614073774",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you keeping everything under a single repositiory"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.170141293203.1330243819505",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you use a source code revision control tool"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.170141293203.585976710447",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you use a source code revision control tool"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.170141293203.1303738703632",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you keeping source code, testing scripts and infrastructure as code under a single repository"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.610421961691.1358581892895",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you have an artifect repository in place"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.610421961691.258272890680",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Is your database schema in version control"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.610421961691.816699796963",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you using trunk based development"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.219718800476.88124395445",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Is a build triggered on every code commit"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.219718800476.299912632362",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "are unit tests run during the CI process"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.219718800476.1377872167082",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Does a CI build fail if coverage is below a defined threshold"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.219718800476.1239582410219",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "is a code style check running as part of the CI process"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.219718800476.399711400330",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are testing environment being provisioned on demand"
+                    }
+                ]
+            }
+        ]
+    }
+}
