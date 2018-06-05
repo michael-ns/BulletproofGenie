@@ -1,38 +1,71 @@
-    /* eslint-disable  func-names */
-    /* eslint quote-props: ["error", "consistent"]*/
-
-    // alexa-cookbook sample code
-
-    // There are three sections, Text Strings, Skill Code, and Helper Function(s).
-    // You can copy and paste the entire file contents as the code for a new Lambda function,
-    // or copy & paste section #3, the helper function, to the bottom of your existing Lambda code.
-
-    // TODO add URL to this entry in the cookbook
-
-
      // 1. Text strings =====================================================================================================
      //    Modify these strings and messages to change the behavior of your Lambda function
-
+    'use strict';
      let speechOutput;
      let reprompt;
-     const welcomeOutput = "Thanks for summoning me. How can I help?";
+     const welcomeOutput = "Thanks for summoning me. How can I help? Say run assessment to start";
      const welcomeReprompt = "Try say start a quiz";
      const resultIntro = [
        "Ok then. "
      ];
 
-
-
      // 2. Skill Code =======================================================================================================
 
-    'use strict';
-    const Alexa = require('alexa-sdk');
-    const APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
+
+    var Alexa = require('alexa-sdk');
+    var storage = require("./storage");
+    var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
+    
+    exports.handler = function (event, context, callback) {
+      // DataStore();
+      var alexa = Alexa.handler(event, context);
+      alexa.registerHandlers(handlers);
+      alexa.execute();
+    };
+    
+    function DataStore(){
+      console.log('xxxxxxxxxxx');
+      
+      var response = '';
+      storage.getColor((color) => {
+        console.log('$$$$$$$$$$$');
+        response = color + ' is your favorite color';
+        console.log(response);
+      });
+    }
 
     const handlers = {
         'LaunchRequest': function () {
+          console.log('=============^^============');
+
+          // this.attributes['userName'] = 'Kabooya';
+          // DataStore(this.event);
+
           this.response.speak(welcomeOutput).listen(welcomeReprompt);
           this.emit(':responseReady');
+        },
+        'TestIntent': function () {
+          console.log('=============hello============');
+          
+          // this.attributes['userName'] = 'Kabooya';
+          // DataStore(this.event);
+          
+          var params = {
+            TableName: 'HelloWorld',
+            Key: {
+              userId: 'mhou',
+            }
+          };
+          
+           readDynamoItem(params, myResult=>{
+
+                console.log(myResult);
+    
+                var speechOutput = "Let's roll!";
+                this.response.speak(speechOutput);
+                this.emit(':responseReady');
+    
+            });
         },
         'Assessment': function () {
             //delegate to Alexa to collect all the required slot values
@@ -77,9 +110,10 @@
             // });
         },
         'QuizStarter': function () {
-            var speechOutput = "Specify an area: source control, continuous integration, production deployment, development and operation collaboration, automated testing, infrastructure or security.";
+            var speechOutput = "Please specify an area, such as source control, continuous integration, production deployment, dev and ops collaboration, automated testing, infrastructure, or security.";
             //say the results
             this.response.speak(speechOutput);
+            this.response.shouldEndSession(false);
             this.emit(":responseReady");
         },
         'SourceControl': function () {
@@ -133,6 +167,134 @@
             this.response.speak(speechOutput);
             this.emit(":responseReady");
         },
+        'ProductionDeployment': function () {
+            //delegate to Alexa to collect all the required slot values
+            var filledSlots = delegateSlotCollection.call(this);
+
+            //compose speechOutput that simply reads all the collected slot values
+            var speechOutput = randomPhrase(resultIntro);
+
+            var score = 0;
+            var questionA = this.event.request.intent.slots.pd_a.value;
+            if (questionA == 'yes') {score += 1};
+            var questionB = this.event.request.intent.slots.pd_b.value;
+            if (questionB == 'yes') {score += 1};
+            var questionC = this.event.request.intent.slots.pd_c.value;
+            if (questionC == 'yes') {score += 1};
+            var questionD = this.event.request.intent.slots.pd_d.value;
+            if (questionD == 'yes') {score += 1};
+            var questionE = this.event.request.intent.slots.pd_e.value;
+            if (questionE == 'yes') {score += 1};
+
+            speechOutput += "You have scored " + score + " out of 5 for production deployment";
+
+            //say the results
+            this.response.speak(speechOutput);
+            this.emit(":responseReady");
+        },
+        'DevOpsCollaboration': function () {
+            //delegate to Alexa to collect all the required slot values
+            var filledSlots = delegateSlotCollection.call(this);
+
+            //compose speechOutput that simply reads all the collected slot values
+            var speechOutput = randomPhrase(resultIntro);
+
+            var score = 0;
+            var questionA = this.event.request.intent.slots.doc_a.value;
+            if (questionA == 'yes') {score += 1};
+            var questionB = this.event.request.intent.slots.doc_b.value;
+            if (questionB == 'yes') {score += 1};
+            var questionC = this.event.request.intent.slots.doc_c.value;
+            if (questionC == 'yes') {score += 1};
+            var questionD = this.event.request.intent.slots.doc_d.value;
+            if (questionD == 'yes') {score += 1};
+            var questionE = this.event.request.intent.slots.doc_e.value;
+            if (questionE == 'yes') {score += 1};
+
+            speechOutput += "You have scored " + score + " out of 5 for dev and ops collaboration";
+
+            //say the results
+            this.response.speak(speechOutput);
+            this.emit(":responseReady");
+        },
+        'AutomatedTesting': function () {
+            //delegate to Alexa to collect all the required slot values
+            var filledSlots = delegateSlotCollection.call(this);
+
+            //compose speechOutput that simply reads all the collected slot values
+            var speechOutput = randomPhrase(resultIntro);
+
+            var score = 0;
+            var questionA = this.event.request.intent.slots.at_a.value;
+            if (questionA == 'yes') {score += 1};
+            var questionB = this.event.request.intent.slots.at_b.value;
+            if (questionB == 'yes') {score += 1};
+            var questionC = this.event.request.intent.slots.at_c.value;
+            if (questionC == 'yes') {score += 1};
+            var questionD = this.event.request.intent.slots.at_d.value;
+            if (questionD == 'yes') {score += 1};
+            var questionE = this.event.request.intent.slots.at_e.value;
+            if (questionE == 'yes') {score += 1};
+
+            speechOutput += "You have scored " + score + " out of 5 for automated testing";
+
+            //say the results
+            this.response.speak(speechOutput);
+            this.emit(":responseReady");
+        },
+        'Infrastructure': function () {
+            //delegate to Alexa to collect all the required slot values
+            var filledSlots = delegateSlotCollection.call(this);
+
+            //compose speechOutput that simply reads all the collected slot values
+            var speechOutput = randomPhrase(resultIntro);
+
+            var score = 0;
+            var questionA = this.event.request.intent.slots.infra_a.value;
+            if (questionA == 'yes') {score += 1};
+            var questionB = this.event.request.intent.slots.infra_b.value;
+            if (questionB == 'yes') {score += 1};
+            var questionC = this.event.request.intent.slots.infra_c.value;
+            if (questionC == 'yes') {score += 1};
+            var questionD = this.event.request.intent.slots.infra_d.value;
+            if (questionD == 'yes') {score += 1};
+            var questionE = this.event.request.intent.slots.infra_e.value;
+            if (questionE == 'yes') {score += 1};
+
+            speechOutput += "You have scored " + score + " out of 5 for infrastructure automation";
+
+            //say the results
+            this.response.speak(speechOutput);
+            this.emit(":responseReady");
+        },
+        'Security': function () {
+            //delegate to Alexa to collect all the required slot values
+            var filledSlots = delegateSlotCollection.call(this);
+
+            //compose speechOutput that simply reads all the collected slot values
+            var speechOutput = randomPhrase(resultIntro);
+
+            var score = 0;
+            var questionA = this.event.request.intent.slots.sec_a.value;
+            if (questionA == 'yes') {score += 1};
+            var questionB = this.event.request.intent.slots.sec_b.value;
+            if (questionB == 'yes') {score += 1};
+            var questionC = this.event.request.intent.slots.sec_c.value;
+            if (questionC == 'yes') {score += 1};
+            var questionD = this.event.request.intent.slots.sec_d.value;
+            if (questionD == 'yes') {score += 1};
+            var questionE = this.event.request.intent.slots.sec_e.value;
+            if (questionE == 'yes') {score += 1};
+
+            speechOutput += "You have scored " + score + " out of 5 for security";
+
+            //say the results
+            this.response.speak(speechOutput);
+            this.emit(":responseReady");
+        },
+        'Unhandled': function() {
+          this.emit(':ask', 'Sorry, I didn\'t get that.', 'Hello?');
+        },
         'AMAZON.HelpIntent': function () {
             speechOutput = "";
             reprompt = "";
@@ -140,29 +302,20 @@
             this.emit(':responseReady');
         },
         'AMAZON.CancelIntent': function () {
-            speechOutput = "";
+            speechOutput = "Goodbye.";
             this.response.speak(speechOutput);
             this.emit(':responseReady');
         },
         'AMAZON.StopIntent': function () {
-            speechOutput = "";
+            speechOutput = "Goodbye.";
             this.response.speak(speechOutput);
             this.emit(':responseReady');
         },
         'SessionEndedRequest': function () {
-            var speechOutput = "";
+            var speechOutput = "Goodbye.";
             this.response.speak(speechOutput);
             this.emit(':responseReady');
         },
-    };
-
-    exports.handler = (event, context) => {
-        var alexa = Alexa.handler(event, context);
-        alexa.appId = APP_ID;
-        // To enable string internationalization (i18n) features, set a resources object.
-        //alexa.resources = languageStrings;
-        alexa.registerHandlers(handlers);
-        alexa.execute();
     };
 
     //    END of Intent Handlers {} ========================================================================================
@@ -225,3 +378,28 @@
             callback('message sent');
         });
     }
+    
+    
+    function readDynamoItem(params, callback) {
+
+    var AWS = require("aws-sdk");
+    AWS.config.update({
+      region: "us-east-1",
+      endpoint: "https://dynamodb.us-east-1.amazonaws.com"
+    });
+    var dynamodb = new AWS.DynamoDB.DocumentClient();
+
+    console.log('reading item from DynamoDB table');
+
+    dynamodb.get(params, (err, data) => {
+        if (err) {
+            console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
+        } else {
+            console.log("GetItem succeeded:", JSON.stringify(data, null, 2));
+
+            callback(data.Item.message);  // this particular row has an attribute called message
+
+        }
+    });
+
+}
