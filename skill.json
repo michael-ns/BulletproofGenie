@@ -24,7 +24,7 @@
                         }
                     ],
                     "samples": [
-                        "bring it on"
+                        "Compare my release frequency with the others"
                     ]
                 },
                 {
@@ -80,6 +80,9 @@
                     "name": "QuizStarter",
                     "slots": [],
                     "samples": [
+                        "start assessment",
+                        "run assessment",
+                        "run devops assessment",
                         "run quiz",
                         "score my practice",
                         "assess my performance",
@@ -132,6 +135,232 @@
                         "run quiz for continuous integration",
                         "continuous integration"
                     ]
+                },
+                {
+                    "name": "BPSupport",
+                    "slots": [],
+                    "samples": [
+                        "raise a support ticket",
+                        "I have an emergency",
+                        "health check",
+                        "How many support tickets do I have",
+                        "status update"
+                    ]
+                },
+                {
+                    "name": "ProductionDeployment",
+                    "slots": [
+                        {
+                            "name": "pd_a",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{pd_a}"
+                            ]
+                        },
+                        {
+                            "name": "pd_b",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{pd_b}"
+                            ]
+                        },
+                        {
+                            "name": "pd_c",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{pd_c}"
+                            ]
+                        },
+                        {
+                            "name": "pd_d",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{pd_d}"
+                            ]
+                        },
+                        {
+                            "name": "pd_e",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{pd_e}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "production deployment"
+                    ]
+                },
+                {
+                    "name": "DevOpsCollaboration",
+                    "slots": [
+                        {
+                            "name": "doc_a",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{doc_a}"
+                            ]
+                        },
+                        {
+                            "name": "doc_b",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{doc_b}"
+                            ]
+                        },
+                        {
+                            "name": "doc_c",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{doc_c}"
+                            ]
+                        },
+                        {
+                            "name": "doc_d",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{doc_d}"
+                            ]
+                        },
+                        {
+                            "name": "doc_e",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{doc_e}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "dev and ops collaboration"
+                    ]
+                },
+                {
+                    "name": "AutomatedTesting",
+                    "slots": [
+                        {
+                            "name": "at_a",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{at_a}"
+                            ]
+                        },
+                        {
+                            "name": "at_b",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{at_b}"
+                            ]
+                        },
+                        {
+                            "name": "at_c",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{at_c}"
+                            ]
+                        },
+                        {
+                            "name": "at_d",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{at_d}"
+                            ]
+                        },
+                        {
+                            "name": "at_e",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{at_e}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "automated testing"
+                    ]
+                },
+                {
+                    "name": "Infrastructure",
+                    "slots": [
+                        {
+                            "name": "infra_a",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{infra_a}"
+                            ]
+                        },
+                        {
+                            "name": "infra_b",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{infra_b}"
+                            ]
+                        },
+                        {
+                            "name": "infra_c",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{infra_c}"
+                            ]
+                        },
+                        {
+                            "name": "infra_d",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{infra_d}"
+                            ]
+                        },
+                        {
+                            "name": "infra_e",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{infra_e}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "infrastructure"
+                    ]
+                },
+                {
+                    "name": "Security",
+                    "slots": [
+                        {
+                            "name": "sec_a",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{sec_a}"
+                            ]
+                        },
+                        {
+                            "name": "sec_b",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{sec_b}"
+                            ]
+                        },
+                        {
+                            "name": "sec_c",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{sec_c}"
+                            ]
+                        },
+                        {
+                            "name": "sec_d",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{sec_d}"
+                            ]
+                        },
+                        {
+                            "name": "sec_e",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "{sec_e}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "security"
+                    ]
                 }
             ],
             "types": [
@@ -155,8 +384,20 @@
                     "values": [
                         {
                             "name": {
+                                "value": "I don't know",
+                                "synonyms": [
+                                    "don't know",
+                                    "no idea",
+                                    "not sure"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
                                 "value": "no",
                                 "synonyms": [
+                                    "no way",
+                                    "nah",
                                     "nope"
                                 ]
                             }
@@ -165,6 +406,9 @@
                             "name": {
                                 "value": "yes",
                                 "synonyms": [
+                                    "yeah",
+                                    "of course",
+                                    "sure",
                                     "yep"
                                 ]
                             }
@@ -349,6 +593,266 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "ProductionDeployment",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "pd_a",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.545497341649.439963981261"
+                            }
+                        },
+                        {
+                            "name": "pd_b",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.545497341649.821190368207"
+                            }
+                        },
+                        {
+                            "name": "pd_c",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.545497341649.686524051530"
+                            }
+                        },
+                        {
+                            "name": "pd_d",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.545497341649.757173717595"
+                            }
+                        },
+                        {
+                            "name": "pd_e",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.545497341649.1381380354484"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DevOpsCollaboration",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "doc_a",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.423077063873.935943538727"
+                            }
+                        },
+                        {
+                            "name": "doc_b",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.423077063873.1269792757053"
+                            }
+                        },
+                        {
+                            "name": "doc_c",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.423077063873.312488183836"
+                            }
+                        },
+                        {
+                            "name": "doc_d",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.423077063873.1045710488665"
+                            }
+                        },
+                        {
+                            "name": "doc_e",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.423077063873.895313430772"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AutomatedTesting",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "at_a",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.691355513911.1365205308608"
+                            }
+                        },
+                        {
+                            "name": "at_b",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.691355513911.458216448204"
+                            }
+                        },
+                        {
+                            "name": "at_c",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.691355513911.899881957637"
+                            }
+                        },
+                        {
+                            "name": "at_d",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.691355513911.886990006701"
+                            }
+                        },
+                        {
+                            "name": "at_e",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.691355513911.1372825097256"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Infrastructure",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "infra_a",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.762199531941.933754103284"
+                            }
+                        },
+                        {
+                            "name": "infra_b",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.762199531941.1347679708282"
+                            }
+                        },
+                        {
+                            "name": "infra_c",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.762199531941.8472323757"
+                            }
+                        },
+                        {
+                            "name": "infra_d",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.762199531941.250122617929"
+                            }
+                        },
+                        {
+                            "name": "infra_e",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.762199531941.940074656208"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Security",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "sec_a",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.253650080430.991413179297"
+                            }
+                        },
+                        {
+                            "name": "sec_b",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.253650080430.142593520330"
+                            }
+                        },
+                        {
+                            "name": "sec_c",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.253650080430.445729520781"
+                            }
+                        },
+                        {
+                            "name": "sec_d",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.253650080430.625638866325"
+                            }
+                        },
+                        {
+                            "name": "sec_e",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.253650080430.651195679730"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -385,7 +889,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Do you use a source code revision control tool"
+                        "value": "I'm going to ask you five yes or no questions related to your source control practice. Here it comes. Do you use a source code revision control tool"
                     }
                 ]
             },
@@ -430,7 +934,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Is a build triggered on every code commit"
+                        "value": "I'm going to ask you five yes or no questions related to your continuous integration practice. Here it comes. Is a build triggered on every code commit"
                     }
                 ]
             },
@@ -439,7 +943,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "are unit tests run during the CI process"
+                        "value": "are unit tests run during the continuous integration process"
                     }
                 ]
             },
@@ -448,7 +952,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Does a CI build fail if coverage is below a defined threshold"
+                        "value": "Does a continuous integration build fail if coverage is below a defined threshold"
                     }
                 ]
             },
@@ -457,7 +961,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "is a code style check running as part of the CI process"
+                        "value": "is a code style check running as part of the continuous integration process"
                     }
                 ]
             },
@@ -467,6 +971,231 @@
                     {
                         "type": "PlainText",
                         "value": "Are testing environment being provisioned on demand"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.545497341649.439963981261",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm going to ask you five yes or no questions related to your production deployment practice. Here it comes. Do you use the same deployment process and scripts to deploy to any given environment, including production?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.545497341649.821190368207",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you use Canary deployment for Production?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.545497341649.686524051530",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you use Blue Green deployment for Production?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.545497341649.757173717595",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you use automated deployment, from code commit up to Pre-Production without manual intervention?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.545497341649.1381380354484",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you use automated deployment, from code commit up to Production without manual intervention?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.423077063873.935943538727",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm going to ask you five yes or no questions related to your development and operations collaboration. Here it comes. Do you have predictable release date leveraging incremental delivery?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.423077063873.1269792757053",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Is it the team that does the estimating of delivery date?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.423077063873.312488183836",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do your development teams have Product Owners who prioritise the product backlog regularly?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.423077063873.1045710488665",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are there regular demonstrations of working software to the key stakeholders?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.423077063873.895313430772",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Is the team cross-functional?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.691355513911.1365205308608",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm going to ask you five yes or no questions related to your automated testing practice. Here it comes. Is the automated test suite running at least before the release ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.691355513911.458216448204",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Is the automated test suite running at least once a day ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.691355513911.899881957637",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Is there a maintained automated test suite for all business critical features ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.691355513911.886990006701",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Does the team produce automated test whilst introducing new features?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.691355513911.1372825097256",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are all automated tests reviewed and test data set has been updated periodically ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.762199531941.933754103284",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm going to ask you five yes or no questions related to your infrastructure automation practice. Here it comes. Is your server infrastructure managed in a source control repository?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.762199531941.1347679708282",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Is at least eighty percent of the infrastructure code non-project-specific, i.e. modular?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.762199531941.8472323757",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Is there a single configuration file for each stage of the environment?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.762199531941.250122617929",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Is there a continuous integration pipeline for server infrastructure changes?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.762199531941.940074656208",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do the infrastructure stages coordinate with developer code stages in your continuous integration pipeline?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.253650080430.991413179297",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm going to ask you five yes or no questions related to your security posture. Here it comes. Are you consolidating your logs and analysing them on a regular basis?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.253650080430.142593520330",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you enforcing Host and Network Border Security?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.253650080430.445729520781",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you encrypt data in transit AND at rest?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.253650080430.625638866325",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Can you detect and respond to events AND incidents in a timely manner?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.253650080430.651195679730",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Have you integrated vulnerability scanning and penetration testing as part of your continuous integration pipeline?"
                     }
                 ]
             }
